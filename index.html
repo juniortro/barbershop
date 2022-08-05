@@ -10,6 +10,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css" rel="stylesheet">
     <title>Barber Shop</title>
   </head>
   <body>
@@ -238,6 +239,7 @@
             <img src="./images/gallery-img7.png" alt="Galeria" />
           </div>
         </div>
+        <div class="js-carousel--simple-dots"></div>
       </div>
     </section>
 
@@ -299,7 +301,22 @@
     </section>
 
     <footer class="footer">
-      @ 2021 Barber Shop - Todos os direitos reservados
+      @ 2022 Barber Shop - Todos os direitos reservados
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
+    <script>
+      let $simpleCarousel = document.querySelector(".gallery-wrapper")
+
+      new Glider($simpleCarousel, {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        draggable: true,
+        dots: ".js-carousel--simple-dots",
+        arrows: {
+          prev: ".js-carousel--simple-prev",
+          next: ".js-carousel--simple-next",
+        },
+      });
+    </script>
   </body>
 </html>

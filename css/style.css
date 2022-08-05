@@ -395,6 +395,9 @@ body {
 }
 
 @media (max-width: 480px){
+    .appointment {
+        height: 104vh;
+    }
     .appointment .personal-data {
         flex-direction: column;
     }
@@ -456,6 +459,25 @@ body {
     width: 100%;
 }
 
+@media(max-width: 480px){
+    .gallery .container .gallery-wrapper {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .gallery .gallery-wrapper div {
+        border: none;
+        width: 0;
+    }
+
+    .gallery .container .gallery-wrapper div img,
+    .gallery .container .gallery-wrapper {
+        height: 300px;
+    }
+
+}
+
 /****************
 * LOCATION  **
 *****************/
@@ -509,6 +531,13 @@ body {
 
 .location .map iframe {
     width: 100%;
+}
+
+@media (max-width: 480px){
+    .location .head {
+        flex-direction: column;
+        gap: 25px;
+    }
 }
 
 /****************
