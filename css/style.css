@@ -80,6 +80,10 @@ body {
     margin: 0 30px;
 }
 
+.menu-mobile {
+    transition: all 1.3s ease-in-out;
+}
+
 .menu-mobile nav {
     background: #ddd;
     padding: 80px 30px;
