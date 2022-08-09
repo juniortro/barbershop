@@ -14,7 +14,8 @@
     <title>Barber Shop</title>
   </head>
   <body>
-    <div class="menu-mobile">
+    <div class="menu-mobile" style="display: none">
+      <span id="hideMenu"> ≡ </span>
       <nav>
         <ul>
           <li>
@@ -69,7 +70,7 @@
 
       <header class="header-mobile">
         <img src="./images/logo.png" alt="Barber Shop" class="logo" />
-        <span> ≡ </span>
+        <span id="showMenu"> ≡ </span>
       </header>
 
       <div class="banner">
@@ -325,6 +326,8 @@
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
     <script>
       let $simpleCarousel = document.querySelector(".gallery-wrapper")
+      let hideMenu = document.querySelector("#hideMenu")
+      let showMenu = document.querySelector("#showMenu")
 
       new Glider($simpleCarousel, {
         slidesToShow: 2,
@@ -336,6 +339,18 @@
           next: ".js-carousel--simple-next",
         },
       });
+
+      hideMenu.addEventListener("click", function () {
+        document.querySelector(".menu-mobile").classList.add("hidden")
+      })
+
+      showMenu.addEventListener("click", function () {
+        document.querySelector(".menu-mobile").classList.remove("hidden")
+      })
+
+      
+
+
     </script>
   </body>
 </html>

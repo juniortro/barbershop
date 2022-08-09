@@ -102,6 +102,19 @@ body {
     font-size: 24px;
 }
 
+.menu-mobile span {
+    color: var(--color-primary);
+    z-index: 999;
+    font-size: 40px;
+    position: fixed;
+    right: 10%;
+    top: 5%;
+}
+
+.hidden {
+    display: none !important;
+}
+
 
 @media (max-width: 480px){
     .home .header .nav ul {
